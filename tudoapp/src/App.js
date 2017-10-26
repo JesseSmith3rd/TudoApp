@@ -32,6 +32,14 @@ class App extends Component {
       todos
     };
   }
+
+  handleRemoveTodo(index) {
+    this.setState({
+      todos: this.state.todos.filter(function(e, i){
+        return i  !== index;
+      })
+    })
+  }
   render() {
     return (
       <div className="container">
@@ -43,7 +51,7 @@ class App extends Component {
               <p><span className="glyphicon glyphicon-user"></span>{todo.todoResponsible}</p>
               <p>{todo.todoDescription}</p>
 
-              <button className="btn btn-danger btn-sm"><span className="glyphicon glyphicon-trash"></span>Delete</button>
+              <button className="btn btn-danger btn-sm" onClick={this.handleRemoveTodo.bind(this, index)}><span className="glyphicon glyphicon-trash"></span>Delete</button>
             </li>
           )}
         </ul>
