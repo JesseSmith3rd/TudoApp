@@ -34,7 +34,9 @@ class App extends Component {
   }
   render() {
     return (
-      
+      <div className="container">
+        <h4>Todo Count:<span className="badge">{this.state.todos.length}</span></h4>
+      </div>  
     );
   }
 }
