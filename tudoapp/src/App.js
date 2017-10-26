@@ -41,6 +41,7 @@ class App extends Component {
             <li className="list-group-item" key={index}>
               <h4 className="list-group-item-heading">{todo.todoTitle}<small><span className="label label-info">{todo.todoPriority}</span></small></h4>
               <p><span className="glyphicon glyphicon-user"></span>{todo.todoResponsible}</p>
+              <p>{todo.todoDescription}</p>
             </li>
           )}
         </ul>
